@@ -11,9 +11,9 @@
 
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','PLACEHOLDER_PIXEL_ID');fbq('track','PageView');
+fbq('init','1132463147908071');fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PLACEHOLDER_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1132463147908071&ev=PageView&noscript=1"/></noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -461,7 +461,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="no">✗</span> <span style="opacity:.4">Без індивідуальних дзвінків</span></li>
           <li><span class="no">✗</span> <span style="opacity:.4">Без перевірки домашок</span></li>
         </ul>
-        <button class="btn btn-ghost-white" onclick="openLeadForm('Старт',600)">Обрати Старт</button>
+        <button class="btn btn-ghost-white" onclick="goToPay('Старт',600,'https://secure.wayforpay.com/button/b03f94a5ab11e')">Обрати Старт</button>
       </div>
       <div class="price-card featured reveal d2">
         <div class="price-badge">Рекомендований</div>
@@ -477,7 +477,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="ck">✓</span> Доступ — 6 місяців</li>
           <li><span class="ck">✓</span> Alumni-чат</li>
         </ul>
-        <button class="btn btn-gold" onclick="openLeadForm('Наставництво',1200)">Обрати Наставництво</button>
+        <button class="btn btn-gold" onclick="goToPay('Наставництво',1200,'https://secure.wayforpay.com/button/b93bc536243c7')">Обрати Наставництво</button>
       </div>
       <div class="price-card reveal d3">
         <div class="price-name">VIP</div>
@@ -492,7 +492,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="ck">✓</span> Стратегія на 3 місяці</li>
           <li><span class="ck">✓</span> Доступ — 12 місяців</li>
         </ul>
-        <button class="btn btn-ghost" onclick="openLeadForm('VIP',2500)">Обрати VIP</button>
+        <button class="btn btn-ghost" onclick="goToPay('VIP',2500,'https://secure.wayforpay.com/button/b2e99a4b64de2')">Обрати VIP</button>
       </div>
     </div>
     <p class="price-note reveal">Оплата частинами — напиши для деталей. Після заявки — коротка розмова. Без тиску.</p>
@@ -603,7 +603,10 @@ window.addEventListener('scroll',()=>{if(innerWidth>768)return;const h=hs.getBou
 const pob=new IntersectionObserver(e=>{e.forEach(n=>{if(n.isIntersecting){if(typeof fbq!=='undefined')fbq('track','ViewContent',{content_name:'Pricing'});pob.unobserve(n.target)}})},{threshold:.3});
 pob.observe(ps);
 
-// Lead form
+// Payment + Lead event
+function goToPay(tariff,price,url){if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:tariff,value:price,currency:'USD'});window.open(url,'_blank')}
+
+// Lead form (backup)
 function openLeadForm(t,p){if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:t,value:p,currency:'USD'});document.getElementById('selectedTariff').textContent=t+' — $'+p;document.getElementById('formTariff').value=t;document.getElementById('formPrice').value=p;document.getElementById('leadFormView').style.display='block';document.getElementById('leadFormSuccess').style.display='none';document.getElementById('leadFormModal').classList.add('open');document.body.style.overflow='hidden'}
 async function submitLeadForm(){const n=document.getElementById('formName').value.trim(),e=document.getElementById('formEmail').value.trim(),p=document.getElementById('formPhone').value.trim(),t=document.getElementById('formTariff').value,pr=document.getElementById('formPrice').value;if(!n||!e||!p)return alert('Заповни всі поля');const u=gu();try{await fetch('PLACEHOLDER_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},mode:'no-cors',body:JSON.stringify({timestamp:new Date().toISOString(),name:n,email:e,phone:p,tariff:t,price:pr,utm_source:u.utm_source||'',utm_medium:u.utm_medium||'',utm_campaign:u.utm_campaign||'',url:location.href})})}catch(err){}if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{content_name:t,value:+pr,currency:'USD'});document.getElementById('leadFormView').style.display='none';document.getElementById('leadFormSuccess').style.display='block'}
 
