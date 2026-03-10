@@ -91,19 +91,19 @@ section{padding:100px 0;position:relative}
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:80px 0;overflow:hidden}
 
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg-img{position:absolute;inset:0;background:url('hero-bg.png') center center/cover no-repeat;animation:heroZoom 30s ease-in-out infinite alternate}
+.hero-bg-img{position:absolute;inset:0;background:url('hero-bg.png') center center/cover no-repeat;opacity:.55;animation:heroZoom 30s ease-in-out infinite alternate}
 @keyframes heroZoom{0%{transform:scale(1)}100%{transform:scale(1.06)}}
 
 /* Dark overlays for text readability */
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.45) 0%,rgba(10,10,15,.3) 30%,rgba(10,10,15,.6) 70%,rgba(10,10,15,.95) 100%);z-index:1}
-.hero-bg .side-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,15,.7) 0%,transparent 50%);z-index:2}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.75) 0%,rgba(10,10,15,.65) 30%,rgba(10,10,15,.8) 70%,rgba(10,10,15,.97) 100%);z-index:1}
+.hero-bg .side-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,15,.85) 0%,rgba(10,10,15,.4) 60%,transparent 100%);z-index:2}
 
 /* Gold particles */
 .hero-particles{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
 .particle{position:absolute;width:3px;height:3px;background:var(--gold);border-radius:50%;opacity:0;animation:particleFloat linear infinite}
 @keyframes particleFloat{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.6}90%{opacity:.6}100%{opacity:0;transform:translateY(-20vh) scale(1)}}
 
-.hero-content{position:relative;z-index:10;max-width:680px}
+.hero-content{position:relative;z-index:10;max-width:680px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
 
 /* Brand tag */
 .hero-brand-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:32px;font-family:var(--font-h);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.8}
@@ -111,13 +111,13 @@ section{padding:100px 0;position:relative}
 
 .hero h1{font-size:clamp(36px,7vw,64px);font-weight:900;line-height:1.05;margin-bottom:12px;letter-spacing:-.03em}
 .hero .title-gold{background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero .title-sub{display:block;font-size:clamp(18px,3vw,28px);font-weight:500;color:var(--text2);margin-top:8px;letter-spacing:-.01em;-webkit-text-fill-color:var(--text2)}
+.hero .title-sub{display:block;font-size:clamp(18px,3vw,28px);font-weight:500;color:#D4CFC7;margin-top:8px;letter-spacing:-.01em;-webkit-text-fill-color:#D4CFC7;text-shadow:0 2px 16px rgba(0,0,0,.7)}
 
-.hero-desc{font-size:19px;color:var(--text2);margin:28px 0 40px;line-height:1.7;max-width:560px}
+.hero-desc{font-size:19px;color:var(--text2);margin:28px 0 40px;line-height:1.7;max-width:560px;text-shadow:0 2px 16px rgba(0,0,0,.7)}
 
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 
-.hero-stats{display:flex;flex-wrap:wrap;gap:24px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:24px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border);text-shadow:none}
 .hero-stat{text-align:left}
 .hero-stat-num{font-family:var(--font-h);font-size:28px;font-weight:800;color:var(--gold-light)}
 .hero-stat-label{font-size:13px;color:var(--text3);margin-top:2px;letter-spacing:.02em}
@@ -411,7 +411,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
     <div class="section-label reveal">Хто веде</div>
     <h2 class="section-title reveal">Хто веде наставництво</h2>
     <div class="author-grid">
-      <div class="author-photo reveal">Ваше фото</div>
+      <div class="author-photo reveal" style="padding:0;overflow:hidden"><img src="photo_2025-12-19 15.13.38.jpeg" alt="Автор наставництва СВІЙ ЗАПУСК" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1"></div>
       <div>
         <p class="reveal" style="font-size:17px;margin-bottom:14px;line-height:1.7;color:var(--text2)">7 років у digital-маркетингу. Більше 3 років роблю запуски онлайн-продуктів з нуля та масштабую існуючі.</p>
         <div class="author-stats reveal d1">
