@@ -451,8 +451,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
     <div class="pricing-grid">
       <div class="price-card reveal d1">
         <div class="price-name">Старт</div>
-        <div class="price-amount"><span class="cur">$</span>600</div>
-        <div class="price-desc">Правильна система + підтримка групи</div>
+        <div class="price-desc" style="margin-top:16px">Правильна система + підтримка групи</div>
         <ul class="price-features">
           <li><span class="ck">✓</span> 6 модулів + шаблони</li>
           <li><span class="ck">✓</span> Чат підтримки (пн–пт)</li>
@@ -461,13 +460,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="no">✗</span> <span style="opacity:.4">Без індивідуальних дзвінків</span></li>
           <li><span class="no">✗</span> <span style="opacity:.4">Без перевірки домашок</span></li>
         </ul>
-        <button class="btn btn-ghost-white" onclick="goToPay('Старт',600,'https://secure.wayforpay.com/button/b03f94a5ab11e')">Обрати Старт</button>
+        <button class="btn btn-ghost-white" onclick="openLeadForm('Старт')">Залишити заявку</button>
       </div>
       <div class="price-card featured reveal d2">
         <div class="price-badge">Рекомендований</div>
         <div class="price-name">Наставництво</div>
-        <div class="price-amount"><span class="cur">$</span>1 200</div>
-        <div class="price-desc">Гарантовано до результату</div>
+        <div class="price-desc" style="margin-top:16px">Гарантовано до результату</div>
         <ul class="price-features">
           <li><span class="ck">✓</span> Все з тарифу "Старт"</li>
           <li><span class="ck">✓</span> 2 дзвінки 1-на-1</li>
@@ -477,12 +475,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="ck">✓</span> Доступ — 6 місяців</li>
           <li><span class="ck">✓</span> Alumni-чат</li>
         </ul>
-        <button class="btn btn-gold" onclick="goToPay('Наставництво',1200,'https://secure.wayforpay.com/button/b93bc536243c7')">Обрати Наставництво</button>
+        <button class="btn btn-gold" onclick="openLeadForm('Наставництво')">Залишити заявку</button>
       </div>
       <div class="price-card reveal d3">
         <div class="price-name">VIP</div>
-        <div class="price-amount"><span class="cur">$</span>2 500</div>
-        <div class="price-desc">Персональний продюсер на 2 місяці</div>
+        <div class="price-desc" style="margin-top:16px">Персональний продюсер на 2 місяці</div>
         <ul class="price-features">
           <li><span class="ck">✓</span> Все з "Наставництво"</li>
           <li><span class="ck">✓</span> 5 дзвінків 1-на-1</li>
@@ -492,10 +489,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
           <li><span class="ck">✓</span> Стратегія на 3 місяці</li>
           <li><span class="ck">✓</span> Доступ — 12 місяців</li>
         </ul>
-        <button class="btn btn-ghost" onclick="goToPay('VIP',2500,'https://secure.wayforpay.com/button/b2e99a4b64de2')">Обрати VIP</button>
+        <button class="btn btn-ghost" onclick="openLeadForm('VIP')">Залишити заявку</button>
       </div>
     </div>
-    <p class="price-note reveal">Оплата частинами — напиши для деталей. Після заявки — коротка розмова. Без тиску.</p>
+    <p class="price-note reveal">Після заявки — коротка розмова щоб зрозуміти твою ситуацію і підібрати оптимальний формат. Без тиску.</p>
   </div>
 </section>
 
@@ -558,9 +555,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 2
       <h2>Залишити заявку</h2>
       <p style="color:var(--text2);margin-bottom:22px">Тариф: <strong id="selectedTariff" style="color:var(--gold-light)">—</strong></p>
       <div class="form-group"><label>Ім'я</label><input type="text" id="formName" placeholder="Як тебе звати?"></div>
-      <div class="form-group"><label>Email</label><input type="email" id="formEmail" placeholder="your@email.com"></div>
       <div class="form-group"><label>Телефон</label><input type="tel" id="formPhone" placeholder="+380..."></div>
-      <input type="hidden" id="formTariff"><input type="hidden" id="formPrice">
+      <div class="form-group"><label>Telegram</label><input type="text" id="formTelegram" placeholder="@username або номер"></div>
+      <input type="hidden" id="formTariff">
       <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px" onclick="submitLeadForm()">Надіслати заявку →</button>
     </div>
     <div class="form-success" id="leadFormSuccess"><h3>Дякую за заявку!</h3><p style="color:var(--text2)">Зв'яжемось найближчим часом. Без тиску.</p></div>
@@ -606,9 +603,10 @@ pob.observe(ps);
 // Payment + Lead event
 function goToPay(tariff,price,url){if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:tariff,value:price,currency:'USD'});window.open(url,'_blank')}
 
-// Lead form (backup)
-function openLeadForm(t,p){if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:t,value:p,currency:'USD'});document.getElementById('selectedTariff').textContent=t+' — $'+p;document.getElementById('formTariff').value=t;document.getElementById('formPrice').value=p;document.getElementById('leadFormView').style.display='block';document.getElementById('leadFormSuccess').style.display='none';document.getElementById('leadFormModal').classList.add('open');document.body.style.overflow='hidden'}
-async function submitLeadForm(){const n=document.getElementById('formName').value.trim(),e=document.getElementById('formEmail').value.trim(),p=document.getElementById('formPhone').value.trim(),t=document.getElementById('formTariff').value,pr=document.getElementById('formPrice').value;if(!n||!e||!p)return alert('Заповни всі поля');const u=gu();try{await fetch('PLACEHOLDER_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},mode:'no-cors',body:JSON.stringify({timestamp:new Date().toISOString(),name:n,email:e,phone:p,tariff:t,price:pr,utm_source:u.utm_source||'',utm_medium:u.utm_medium||'',utm_campaign:u.utm_campaign||'',url:location.href})})}catch(err){}if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{content_name:t,value:+pr,currency:'USD'});document.getElementById('leadFormView').style.display='none';document.getElementById('leadFormSuccess').style.display='block'}
+// Lead form
+function openLeadForm(tariff){document.getElementById('selectedTariff').textContent=tariff;document.getElementById('formTariff').value=tariff;document.getElementById('leadFormView').style.display='block';document.getElementById('leadFormSuccess').style.display='none';document.getElementById('leadFormModal').classList.add('open');document.body.style.overflow='hidden';document.getElementById('formName').value='';document.getElementById('formPhone').value='';document.getElementById('formTelegram').value=''}
+
+async function submitLeadForm(){const n=document.getElementById('formName').value.trim(),p=document.getElementById('formPhone').value.trim(),tg=document.getElementById('formTelegram').value.trim(),t=document.getElementById('formTariff').value;if(!n||!p||!tg)return alert('Будь ласка, заповни всі поля');const u=gu();const data={timestamp:new Date().toISOString(),name:n,phone:p,telegram:tg,tariff:t,utm_source:u.utm_source||'',utm_medium:u.utm_medium||'',utm_campaign:u.utm_campaign||'',url:location.href};const WEBHOOK='https://script.google.com/macros/s/AKfycbwnOtu6QiRIpdcz9TMXjPVf-NpDffYoJLTeUM3A7x7o-0QueoeFk-pV7ENhAnKmgfsf2Q/exec';try{await fetch(WEBHOOK,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}catch(err){console.log('Webhook:',err)}if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:t,currency:'USD'});document.getElementById('leadFormView').style.display='none';document.getElementById('leadFormSuccess').style.display='block'}
 
 // Modals
 function openModal(t){document.getElementById(t==='privacy'?'privacyModal':'offerModal').classList.add('open');document.body.style.overflow='hidden'}
