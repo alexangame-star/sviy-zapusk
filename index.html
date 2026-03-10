@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СВІЙ ЗАПУСК — Наставництво з монетизації експертних знань</title>
+<meta name="description" content="6-тижневе наставництво з індивідуальним супроводом для експертів. Перетвори свої знання на $3 000–10 000 за запуск.">
+<meta property="og:title" content="СВІЙ ЗАПУСК — Наставництво з монетизації експертних знань">
+<meta property="og:description" content="Перетвори свої знання на $3 000–10 000 за запуск — навіть якщо зараз в тебе 500 підписників">
+<meta property="og:type" content="website">
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','PLACEHOLDER_PIXEL_ID');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PLACEHOLDER_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg:#0A0A0F;
+  --bg2:#0E0E16;
+  --bg3:#13131D;
+  --bg-card:#16161F;
+  --bg-card-hover:#1C1C28;
+  --gold:#D4A843;
+  --gold-light:#F0C95C;
+  --gold-dark:#B8922E;
+  --gold-glow:rgba(212,168,67,0.25);
+  --gold-soft:rgba(212,168,67,0.08);
+  --gold-soft2:rgba(212,168,67,0.12);
+  --gold-border:rgba(212,168,67,0.2);
+  --gold-gradient:linear-gradient(135deg,#F0C95C 0%,#D4A843 40%,#B8922E 100%);
+  --text:#F2EDE4;
+  --text2:#A9A29B;
+  --text3:#6B6560;
+  --border:rgba(212,168,67,0.08);
+  --border2:rgba(255,255,255,0.04);
+  --green:#4ADE80;
+  --red-soft:rgba(239,68,68,0.06);
+  --red-border:rgba(239,68,68,0.12);
+  --shadow:0 4px 24px rgba(0,0,0,0.4);
+  --shadow-gold:0 8px 40px rgba(212,168,67,0.15);
+  --radius:16px;
+  --radius-sm:10px;
+  --tr:0.3s cubic-bezier(0.4,0,0.2,1);
+  --font-h:'Unbounded',sans-serif;
+  --font-b:'Onest',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);line-height:1.7;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-family:var(--font-h);line-height:1.15;font-weight:700}
+a{color:var(--gold);text-decoration:none;transition:var(--tr)}
+a:hover{color:var(--gold-light)}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* Gold line decoration */
+.gold-line{width:60px;height:2px;background:var(--gold-gradient);border-radius:2px;margin-bottom:20px}
+.gold-line-center{margin-left:auto;margin-right:auto}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-h);font-weight:600;font-size:15px;border:none;border-radius:60px;padding:16px 36px;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.2,1);text-decoration:none;letter-spacing:.02em}
+.btn-gold{background:var(--gold-gradient);color:#0A0A0F;box-shadow:var(--shadow-gold)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 50px rgba(212,168,67,.25);color:#0A0A0F}
+.btn-ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold-border)}
+.btn-ghost:hover{background:var(--gold-soft);border-color:var(--gold);transform:translateY(-2px);color:var(--gold-light)}
+.btn-ghost-white{background:transparent;color:var(--text);border:1.5px solid var(--border2)}
+.btn-ghost-white:hover{border-color:var(--gold-border);background:var(--gold-soft);transform:translateY(-2px);color:var(--text)}
+
+/* Sections */
+section{padding:100px 0;position:relative}
+@media(max-width:768px){section{padding:70px 0}}
+.section-label{font-family:var(--font-h);font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-title{font-size:clamp(26px,4.5vw,42px);margin-bottom:20px;max-width:780px;letter-spacing:-.02em}
+.section-sub{font-size:18px;color:var(--text2);max-width:620px;line-height:1.7}
+
+/* ============================== */
+/* HERO                           */
+/* ============================== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:80px 0;overflow:hidden}
+
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg-img{position:absolute;inset:0;background:url('hero-bg.png') center center/cover no-repeat;animation:heroZoom 30s ease-in-out infinite alternate}
+@keyframes heroZoom{0%{transform:scale(1)}100%{transform:scale(1.06)}}
+
+/* Dark overlays for text readability */
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.45) 0%,rgba(10,10,15,.3) 30%,rgba(10,10,15,.6) 70%,rgba(10,10,15,.95) 100%);z-index:1}
+.hero-bg .side-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,15,.7) 0%,transparent 50%);z-index:2}
+
+/* Gold particles */
+.hero-particles{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+.particle{position:absolute;width:3px;height:3px;background:var(--gold);border-radius:50%;opacity:0;animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.6}90%{opacity:.6}100%{opacity:0;transform:translateY(-20vh) scale(1)}}
+
+.hero-content{position:relative;z-index:10;max-width:680px}
+
+/* Brand tag */
+.hero-brand-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:32px;font-family:var(--font-h);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.8}
+.hero-brand-tag::before,.hero-brand-tag::after{content:'';width:20px;height:1px;background:var(--gold);opacity:.4}
+
+.hero h1{font-size:clamp(36px,7vw,64px);font-weight:900;line-height:1.05;margin-bottom:12px;letter-spacing:-.03em}
+.hero .title-gold{background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .title-sub{display:block;font-size:clamp(18px,3vw,28px);font-weight:500;color:var(--text2);margin-top:8px;letter-spacing:-.01em;-webkit-text-fill-color:var(--text2)}
+
+.hero-desc{font-size:19px;color:var(--text2);margin:28px 0 40px;line-height:1.7;max-width:560px}
+
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+.hero-stats{display:flex;flex-wrap:wrap;gap:24px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+.hero-stat{text-align:left}
+.hero-stat-num{font-family:var(--font-h);font-size:28px;font-weight:800;color:var(--gold-light)}
+.hero-stat-label{font-size:13px;color:var(--text3);margin-top:2px;letter-spacing:.02em}
+
+/* ============================== */
+/* SECTIONS                       */
+/* ============================== */
+
+/* About */
+.about-section{background:var(--bg2)}
+.about-list{display:flex;flex-direction:column;gap:10px;margin-top:40px}
+.about-item{display:flex;align-items:flex-start;gap:16px;padding:18px 24px;background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius-sm);transition:var(--tr)}
+.about-item:hover{border-color:var(--gold-border);background:var(--bg-card-hover);transform:translateX(4px)}
+.about-icon{flex-shrink:0;width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--gold-soft);border-radius:8px;color:var(--gold);font-size:12px;margin-top:3px}
+.about-item span{font-size:16px;color:var(--text2)}
+
+/* Why */
+.why-section{background:var(--bg)}
+.why-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+@media(max-width:768px){.why-cards{grid-template-columns:1fr}}
+.why-card{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius);padding:30px;transition:var(--tr)}
+.why-card:hover{border-color:rgba(255,255,255,.06);transform:translateY(-3px)}
+.why-card-icon{font-size:26px;margin-bottom:14px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--red-soft);border-radius:12px}
+.why-card h4{font-size:18px;margin-bottom:8px;font-family:var(--font-h);font-weight:600}
+.why-card p{color:var(--text2);font-size:15px}
+.why-transition{text-align:center;margin-top:44px;font-family:var(--font-h);font-size:18px;font-weight:600;color:var(--gold)}
+
+/* Different */
+.diff-section{background:var(--bg2)}
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+@media(max-width:768px){.diff-grid{grid-template-columns:1fr}}
+.diff-card{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius);padding:30px;transition:var(--tr)}
+.diff-card:hover{border-color:var(--gold-border);transform:translateY(-3px)}
+.diff-icon{font-size:28px;margin-bottom:14px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--gold-soft);border-radius:14px}
+.diff-card h4{font-size:18px;margin-bottom:8px;font-family:var(--font-h);font-weight:600}
+.diff-card p{color:var(--text2);font-size:15px}
+
+/* Transform */
+.transform-section{background:var(--bg)}
+.transform-list{margin-top:44px;display:flex;flex-direction:column;gap:12px}
+.transform-row{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+@media(max-width:640px){.transform-row{grid-template-columns:1fr;gap:6px}.transform-arrow{display:none}}
+.transform-before,.transform-after{padding:16px 20px;border-radius:var(--radius-sm);font-size:15px}
+.transform-before{background:var(--red-soft);border:1px solid var(--red-border);color:var(--text2);text-decoration:line-through;text-decoration-color:rgba(239,68,68,.3)}
+.transform-after{background:var(--gold-soft);border:1px solid var(--gold-border);color:var(--text);font-weight:500}
+.transform-arrow{color:var(--gold);font-size:20px;font-weight:800;font-family:var(--font-h)}
+
+/* Program */
+.program-section{background:var(--bg2);position:relative;overflow:hidden}
+.program-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border),transparent)}
+.accordion{margin-top:44px;display:flex;flex-direction:column;gap:8px}
+.accordion-item{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius);overflow:hidden;transition:var(--tr)}
+.accordion-item:hover{border-color:rgba(255,255,255,.06)}
+.accordion-item.active{border-color:var(--gold-border);background:var(--bg-card-hover)}
+.accordion-header{display:flex;align-items:center;gap:16px;padding:22px 26px;cursor:pointer;user-select:none;transition:var(--tr)}
+.accordion-num{font-family:var(--font-h);font-size:28px;font-weight:900;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;width:44px}
+.accordion-title-wrap{flex:1}
+.accordion-week{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:3px;font-family:var(--font-h)}
+.accordion-title{font-family:var(--font-h);font-size:16px;font-weight:600;line-height:1.35;color:var(--text)}
+@media(max-width:640px){.accordion-title{font-size:14px}}
+.accordion-toggle{flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--gold-soft);transition:transform .35s cubic-bezier(.4,0,.2,1);color:var(--gold);font-size:16px;font-family:var(--font-h)}
+.accordion-item.active .accordion-toggle{transform:rotate(45deg)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.accordion-body-inner{padding:0 26px 26px 86px;color:var(--text2);font-size:15px;line-height:1.8}
+@media(max-width:640px){.accordion-body-inner{padding-left:26px}}
+.accordion-result{margin-top:14px;padding:12px 16px;background:var(--gold-soft);border-left:3px solid var(--gold);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-weight:600;color:var(--text);font-size:14px}
+
+/* Author */
+.author-section{background:var(--bg)}
+.author-grid{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;margin-top:44px}
+@media(max-width:768px){.author-grid{grid-template-columns:1fr;gap:28px}}
+.author-photo{width:100%;aspect-ratio:3/4;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-family:var(--font-h);font-size:14px}
+.author-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+.author-stat{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:16px 18px}
+.author-stat-num{font-family:var(--font-h);font-size:22px;font-weight:800;color:var(--gold-light)}
+.author-stat-label{font-size:13px;color:var(--text3);margin-top:2px}
+.author-quote{font-style:italic;font-size:17px;color:var(--text2);border-left:2px solid var(--gold);padding-left:18px;margin-top:20px;line-height:1.7}
+
+/* Testimonials */
+.testimonials{background:var(--bg2)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+@media(max-width:768px){.test-grid{grid-template-columns:1fr}}
+.test-card{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius);padding:28px;position:relative;transition:var(--tr)}
+.test-card:hover{border-color:var(--gold-border);transform:translateY(-3px)}
+.test-card::before{content:'"';font-family:var(--font-h);font-size:56px;font-weight:900;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.3;position:absolute;top:10px;left:20px;line-height:1}
+.test-text{color:var(--text2);font-size:15px;line-height:1.75;margin-bottom:18px;position:relative;z-index:1}
+.test-author{font-family:var(--font-h);font-weight:600;font-size:14px;color:var(--text)}
+.test-role{font-size:12px;color:var(--text3)}
+.test-note{text-align:center;margin-top:28px;font-size:13px;color:var(--text3);font-style:italic}
+
+/* Pricing */
+.pricing-section{background:var(--bg);position:relative;overflow:hidden}
+.pricing-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border),transparent)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;align-items:start}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.price-card{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius);padding:32px 26px;position:relative;transition:var(--tr)}
+.price-card:hover{transform:translateY(-4px)}
+.price-card.featured{border-color:var(--gold-dark);box-shadow:var(--shadow-gold);transform:scale(1.03);z-index:2}
+.price-card.featured:hover{transform:scale(1.03) translateY(-4px)}
+@media(max-width:900px){.price-card.featured{transform:scale(1)}.price-card.featured:hover{transform:translateY(-4px)}}
+.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold-gradient);color:#0A0A0F;font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 18px;border-radius:60px;white-space:nowrap}
+.price-name{font-family:var(--font-h);font-size:20px;font-weight:700;margin-bottom:4px}
+.price-amount{font-family:var(--font-h);font-size:40px;font-weight:900;margin:14px 0 8px}
+.price-amount .cur{font-size:20px;font-weight:600;opacity:.5}
+.price-desc{color:var(--text2);font-size:14px;margin-bottom:22px;line-height:1.5}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text2);line-height:1.5}
+.price-features .ck{color:var(--gold);flex-shrink:0;font-weight:700;margin-top:2px}
+.price-features .no{color:var(--text3);flex-shrink:0;margin-top:2px;opacity:.4}
+.price-card .btn{width:100%;justify-content:center}
+.price-note{text-align:center;margin-top:28px;color:var(--text2);font-size:14px;line-height:1.7}
+
+/* FAQ */
+.faq-section{background:var(--bg2)}
+.faq-accordion{margin-top:44px;display:flex;flex-direction:column;gap:8px;max-width:760px;margin-left:auto;margin-right:auto}
+.faq-item{background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius-sm);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;font-family:var(--font-h);font-weight:600;font-size:15px;transition:var(--tr);color:var(--text)}
+.faq-q:hover{background:rgba(255,255,255,.02)}
+.faq-icon{flex-shrink:0;transition:transform .35s cubic-bezier(.4,0,.2,1);color:var(--gold);font-size:18px;font-family:var(--font-h)}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.faq-a-inner{padding:0 22px 18px;color:var(--text2);font-size:15px;line-height:1.8}
+
+/* Final CTA */
+.final-cta{text-align:center;position:relative;overflow:hidden;background:var(--bg)}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(212,168,67,.06) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.final-cta .section-title{margin-left:auto;margin-right:auto}
+.final-cta .section-sub{margin-left:auto;margin-right:auto;margin-bottom:36px}
+.final-small{margin-top:18px;font-size:13px;color:var(--text3)}
+
+/* Footer */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 0 28px}
+.footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;margin-bottom:28px}
+.footer-brand{font-family:var(--font-h);font-size:18px;font-weight:800;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-socials{display:flex;gap:10px}
+.footer-social{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--gold-soft);border:1px solid var(--border2);transition:var(--tr);color:var(--gold)}
+.footer-social:hover{background:var(--gold-soft2);border-color:var(--gold-border);color:var(--gold-light)}
+.footer-social svg{width:18px;height:18px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--text3)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:var(--text3);font-size:13px}
+.footer-links a:hover{color:var(--gold)}
+
+/* Modals */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.modal-overlay.open{display:flex}
+.modal-content{background:var(--bg3);color:var(--text);border:1px solid var(--border2);border-radius:var(--radius);max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:36px;position:relative}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:var(--gold-soft);border:none;border-radius:50%;color:var(--gold);cursor:pointer;font-size:16px;transition:var(--tr);font-family:var(--font-h)}
+.modal-close:hover{background:var(--gold-soft2)}
+.modal-content h2{font-size:22px;margin-bottom:18px;font-family:var(--font-h)}
+.modal-content p,.modal-content li{color:var(--text2);font-size:14px;line-height:1.8;margin-bottom:10px}
+.modal-content h3{font-size:16px;margin:20px 0 10px;color:var(--text);font-family:var(--font-h);font-weight:600}
+.modal-content ul{padding-left:20px}
+
+/* Lead form */
+.form-modal .modal-content{max-width:460px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-family:var(--font-h);font-size:12px;font-weight:600;margin-bottom:6px;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
+.form-group input{width:100%;padding:14px 16px;background:var(--bg-card);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text);font-family:var(--font-b);font-size:16px;transition:var(--tr);outline:none}
+.form-group input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+.form-group input::placeholder{color:var(--text3)}
+.form-success{display:none;text-align:center;padding:20px 0}
+.form-success h3{font-size:20px;margin-bottom:10px;color:var(--gold-light);font-family:var(--font-h)}
+
+/* Sticky CTA */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;padding:12px 20px;background:rgba(10,10,15,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);z-index:100;transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:14px}
+@media(max-width:768px){.sticky-cta{display:block}}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-img"></div>
+    <div class="side-fade"></div>
+  </div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-brand-tag reveal">Наставництво</div>
+      <h1 class="reveal d1">
+        <span class="title-gold">СВІЙ ЗАПУСК</span>
+        <span class="title-sub">Перетвори знання на $3 000–10 000</span>
+      </h1>
+      <p class="hero-desc reveal d2">
+        6-тижневе наставництво з індивідуальним супроводом для експертів, які знають свою тему — але досі не заробляють з неї
+      </p>
+      <div class="hero-ctas reveal d3">
+        <a href="#pricing" class="btn btn-gold">Хочу на наставництво →</a>
+        <a href="#program" class="btn btn-ghost">Програма ↓</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="hero-stat"><div class="hero-stat-num"><span class="counter" data-target="7">0</span>+</div><div class="hero-stat-label">років у digital</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">$<span class="counter" data-target="180">0</span>k</div><div class="hero-stat-label">запуск у б'юті</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">до <span class="counter" data-target="10">0</span></div><div class="hero-stat-label">людей у групі</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">до результату</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Впізнай себе</div>
+    <h2 class="section-title reveal">Це про тебе, якщо...</h2>
+    <div class="about-list">
+      <div class="about-item reveal"><div class="about-icon">✦</div><span>Ти знаєш свою тему, але не можеш перетворити це в гроші</span></div>
+      <div class="about-item reveal d1"><div class="about-icon">✦</div><span>Ведеш сторінку, але відчуваєш що кричиш у порожнечу</span></div>
+      <div class="about-item reveal d1"><div class="about-icon">✦</div><span>Починаєш і через тиждень здуваєшся — кожного разу</span></div>
+      <div class="about-item reveal d2"><div class="about-icon">✦</div><span>Інформації багато, а конкретного плану — нуль</span></div>
+      <div class="about-item reveal d2"><div class="about-icon">✦</div><span>Боїшся почати продавати, бо якщо ніхто не купить — буде соромно</span></div>
+      <div class="about-item reveal d3"><div class="about-icon">✦</div><span>Вже витратила гроші на марафони, а результат — красивий конспект</span></div>
+      <div class="about-item reveal d3"><div class="about-icon">✦</div><span>Хочеш стабільно $3 000–7 000 на місяць зі свого — але не знаєш як</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Чесна відповідь</div>
+    <h2 class="section-title reveal">Чому досі не вийшло — і чому це не твоя вина</h2>
+    <div class="why-cards">
+      <div class="why-card reveal d1"><div class="why-card-icon">👥</div><h4>Масові марафони</h4><p>Потоки на 300 людей, де ти одна з натовпу і твою нішу ніхто не розбирав</p></div>
+      <div class="why-card reveal d2"><div class="why-card-icon">📚</div><h4>Теорія без системи</h4><p>Знаєш ЩО робити, але не знаєш ЯК і В ЯКОМУ ПОРЯДКУ</p></div>
+      <div class="why-card reveal d3"><div class="why-card-icon">🚪</div><h4>Закінчився курс — а ти ні</h4><p>Курс закінчився, а ти так нічого і не запустила. Ніхто не допоміг дійти до кінця</p></div>
+      <div class="why-card reveal d4"><div class="why-card-icon">📊</div><h4>Поради не для тебе</h4><p>Стратегії для 50k підписників не працюють коли в тебе 800</p></div>
+    </div>
+    <div class="why-transition reveal">Тому тут все влаштовано інакше ↓</div>
+  </div>
+</section>
+
+<!-- ===== DIFFERENT ===== -->
+<section class="diff-section" id="different">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Наш підхід</div>
+    <h2 class="section-title reveal">Що тут інакше</h2>
+    <div class="diff-grid">
+      <div class="diff-card reveal d1"><div class="diff-icon">👤</div><h4>Група до 10 людей</h4><p>Не потік — а команда, де кожного знають по імені</p></div>
+      <div class="diff-card reveal d2"><div class="diff-icon">🎯</div><h4>Стратегія під твою нішу</h4><p>Не шаблон для всіх — а індивідуальний план</p></div>
+      <div class="diff-card reveal d3"><div class="diff-icon">✅</div><h4>Перевірка кожного кроку</h4><p>Кожна домашка, текст, крок — з зворотним зв'язком</p></div>
+      <div class="diff-card reveal d4"><div class="diff-icon">💰</div><h4>Ціль — гроші, а не сертифікат</h4><p>Перший запуск на $3 000+ за 6–8 тижнів</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRANSFORM ===== -->
+<section class="transform-section" id="transform">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Трансформація</div>
+    <h2 class="section-title reveal">Що зміниться за 6 тижнів</h2>
+    <div class="transform-list">
+      <div class="transform-row reveal"><div class="transform-before">Каша в голові — не знаєш з чого почати</div><div class="transform-arrow">→</div><div class="transform-after">Чітка ніша, продукт, ціна</div></div>
+      <div class="transform-row reveal d1"><div class="transform-before">Хаотичний контент — лайки від подруг</div><div class="transform-arrow">→</div><div class="transform-after">Система, яка приводить покупців</div></div>
+      <div class="transform-row reveal d2"><div class="transform-before">Страх продавати</div><div class="transform-arrow">→</div><div class="transform-after">Люди самі питають "де купити"</div></div>
+      <div class="transform-row reveal d3"><div class="transform-before">Мрії про дохід "колись"</div><div class="transform-arrow">→</div><div class="transform-after">$3 000–10 000 на рахунку</div></div>
+      <div class="transform-row reveal d4"><div class="transform-before">Разовий випадковий успіх</div><div class="transform-arrow">→</div><div class="transform-after">Повторювана система</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM ===== -->
+<section class="program-section" id="program">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Програма</div>
+    <h2 class="section-title reveal">6 кроків до $3 000+ на рахунку</h2>
+    <div class="accordion">
+      <div class="accordion-item reveal"><div class="accordion-header"><div class="accordion-num">01</div><div class="accordion-title-wrap"><div class="accordion-week">Тиждень 1</div><div class="accordion-title">Перший тиждень — перший пост — перша реакція ринку</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Знаходиш свою нішу де люди вже платять. Описуєш ідеального покупця. Формулюєш офер. Публікуєш перший пост і отримуєш реакцію ринку.<div class="accordion-result"><strong>Результат:</strong> чіткість + перший зворотний зв'язок від живих людей</div></div></div></div>
+      <div class="accordion-item reveal d1"><div class="accordion-header"><div class="accordion-num">02</div><div class="accordion-title-wrap"><div class="accordion-week">Тиждень 2</div><div class="accordion-title">Продукт готовий, ціна стоїть, і живі люди кажуть «хочу»</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Створюєш продукт за один вечір. Ставиш ціну. Упаковуєш. Перевіряєш на реальних людях до запуску.<div class="accordion-result"><strong>Результат:</strong> продукт упакований і перевірений. Перші "хочу"</div></div></div></div>
+      <div class="accordion-item reveal d2"><div class="accordion-header"><div class="accordion-num">03</div><div class="accordion-title-wrap"><div class="accordion-week">Тижні 3–4</div><div class="accordion-title">Контент працює: підписники ростуть, в директ пишуть</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Контент-система: план за 40 хвилин. Сторіз, рілс, телеграм. Пакетна зйомка — 1 день = контент на 7–10 днів.<div class="accordion-result"><strong>Результат:</strong> нові підписники + повідомлення в директ + контент наперед</div></div></div></div>
+      <div class="accordion-item reveal d3"><div class="accordion-header"><div class="accordion-num">04</div><div class="accordion-title-wrap"><div class="accordion-week">Тиждень 5</div><div class="accordion-title">Ще не відкрила продажі — а вже питають «де купити»</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Карта запуску по днях. 7 днів прогріву. Ефір після якого купують. Скрипти для директу.<div class="accordion-result"><strong>Результат:</strong> люди питають "коли старт?" ДО відкриття продажів</div></div></div></div>
+      <div class="accordion-item reveal d4"><div class="accordion-header"><div class="accordion-num">05</div><div class="accordion-title-wrap"><div class="accordion-week">Тижні 5–6</div><div class="accordion-title">Перші $3 000–10 000 на рахунку. Не в мріях — на рахунку</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Відкриваєш продажі. 3–5 днів дожимного контенту. Закриваєш вікно. Аналізуєш і плануєш х2.<div class="accordion-result"><strong>Результат:</strong> реальні гроші на рахунку</div></div></div></div>
+      <div class="accordion-item reveal d5"><div class="accordion-header"><div class="accordion-num">06</div><div class="accordion-title-wrap"><div class="accordion-week">Після запуску</div><div class="accordion-title">Від «я один раз заробила» — до «в мене стабільний бізнес»</div></div><div class="accordion-toggle">+</div></div><div class="accordion-body"><div class="accordion-body-inner">Квартальний план. Автоворонка. Холодний трафік. Масштабування від $3k до $10k+.<div class="accordion-result"><strong>Результат:</strong> система, яку можна повторювати</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTHOR ===== -->
+<section class="author-section" id="author">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Хто веде</div>
+    <h2 class="section-title reveal">Хто веде наставництво</h2>
+    <div class="author-grid">
+      <div class="author-photo reveal">Ваше фото</div>
+      <div>
+        <p class="reveal" style="font-size:17px;margin-bottom:14px;line-height:1.7;color:var(--text2)">7 років у digital-маркетингу. Більше 3 років роблю запуски онлайн-продуктів з нуля та масштабую існуючі.</p>
+        <div class="author-stats reveal d1">
+          <div class="author-stat"><div class="author-stat-num">$180k</div><div class="author-stat-label">запуск у б'юті-сфері</div></div>
+          <div class="author-stat"><div class="author-stat-num">$10k/міс</div><div class="author-stat-label">інста-магазини з 0</div></div>
+          <div class="author-stat"><div class="author-stat-num">3+ роки</div><div class="author-stat-label">запуски продуктів</div></div>
+          <div class="author-stat"><div class="author-stat-num">24/7</div><div class="author-stat-label">актуальні стратегії</div></div>
+        </div>
+        <div class="author-quote reveal d2">"Я не продаю мрії. Я даю систему і веду до результату кожного, хто готовий робити."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="gold-line reveal"></div>
+    <div class="section-label reveal">Відгуки</div>
+    <h2 class="section-title reveal">Що кажуть учасники</h2>
+    <div class="test-grid">
+      <div class="test-card reveal d1"><p class="test-text">За 6 тижнів зробила перший запуск — 4 продажі, 28 000 грн. Не мільйон, але це МОЇ гроші з МОЇх знань.</p><div class="test-author">Ім'я</div><div class="test-role">Ніша (placeholder)</div></div>
+      <div class="test-card reveal d2"><p class="test-text">Мене вели за руку. Перевіряли кожен текст. Я б сама ніколи не дійшла до запуску — тут причин не залишилось.</p><div class="test-author">Ім'я</div><div class="test-role">Ніша (placeholder)</div></div>
+      <div class="test-card reveal d3"><p class="test-text">Пройшла 3 курси до цього. Тут мені не давали сховатись. Група маленька, всіх знають по імені.</p><div class="test-author">Ім'я</div><div class="test-role">Ніша (placeholder)</div></div>
+    </div>
+    <div class="test-note reveal">Відгуки будуть оновлені після першого потоку</div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="gold-line gold-line-center reveal"></div>
+    <div class="section-label reveal" style="text-align:center">Тарифи</div>
+    <h2 class="section-title reveal" style="text-align:center;margin-left:auto;margin-right:auto">Обери свій формат</h2>
+    <p class="section-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto">Група до 10 людей · Старт — <strong style="color:var(--gold)">[ДАТА]</strong></p>
+    <div class="pricing-grid">
+      <div class="price-card reveal d1">
+        <div class="price-name">Старт</div>
+        <div class="price-amount"><span class="cur">$</span>600</div>
+        <div class="price-desc">Правильна система + підтримка групи</div>
+        <ul class="price-features">
+          <li><span class="ck">✓</span> 6 модулів + шаблони</li>
+          <li><span class="ck">✓</span> Чат підтримки (пн–пт)</li>
+          <li><span class="ck">✓</span> Групові дзвінки щотижня</li>
+          <li><span class="ck">✓</span> Доступ — 4 місяці</li>
+          <li><span class="no">✗</span> <span style="opacity:.4">Без індивідуальних дзвінків</span></li>
+          <li><span class="no">✗</span> <span style="opacity:.4">Без перевірки домашок</span></li>
+        </ul>
+        <button class="btn btn-ghost-white" onclick="openLeadForm('Старт',600)">Обрати Старт</button>
+      </div>
+      <div class="price-card featured reveal d2">
+        <div class="price-badge">Рекомендований</div>
+        <div class="price-name">Наставництво</div>
+        <div class="price-amount"><span class="cur">$</span>1 200</div>
+        <div class="price-desc">Гарантовано до результату</div>
+        <ul class="price-features">
+          <li><span class="ck">✓</span> Все з тарифу "Старт"</li>
+          <li><span class="ck">✓</span> 2 дзвінки 1-на-1</li>
+          <li><span class="ck">✓</span> Перевірка домашніх завдань</li>
+          <li><span class="ck">✓</span> Розбір ніші і продукту</li>
+          <li><span class="ck">✓</span> Допомога з текстами</li>
+          <li><span class="ck">✓</span> Доступ — 6 місяців</li>
+          <li><span class="ck">✓</span> Alumni-чат</li>
+        </ul>
+        <button class="btn btn-gold" onclick="openLeadForm('Наставництво',1200)">Обрати Наставництво</button>
+      </div>
+      <div class="price-card reveal d3">
+        <div class="price-name">VIP</div>
+        <div class="price-amount"><span class="cur">$</span>2 500</div>
+        <div class="price-desc">Персональний продюсер на 2 місяці</div>
+        <ul class="price-features">
+          <li><span class="ck">✓</span> Все з "Наставництво"</li>
+          <li><span class="ck">✓</span> 5 дзвінків 1-на-1</li>
+          <li><span class="ck">✓</span> Підтримка 7/7</li>
+          <li><span class="ck">✓</span> Побудова автоворонки</li>
+          <li><span class="ck">✓</span> Репетиція ефіру</li>
+          <li><span class="ck">✓</span> Стратегія на 3 місяці</li>
+          <li><span class="ck">✓</span> Доступ — 12 місяців</li>
+        </ul>
+        <button class="btn btn-ghost" onclick="openLeadForm('VIP',2500)">Обрати VIP</button>
+      </div>
+    </div>
+    <p class="price-note reveal">Оплата частинами — напиши для деталей. Після заявки — коротка розмова. Без тиску.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="gold-line gold-line-center reveal"></div>
+    <div class="section-label reveal" style="text-align:center">FAQ</div>
+    <h2 class="section-title reveal" style="text-align:center;margin-left:auto;margin-right:auto">Часті питання</h2>
+    <div class="faq-accordion">
+      <div class="faq-item reveal"><div class="faq-q">А якщо в мене мало підписників — 300–800?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Працюємо з тим що є. Більшість починали з маленьких чисел — і саме тут робили перші продажі.</div></div></div>
+      <div class="faq-item reveal d1"><div class="faq-q">Скільки часу на день потрібно?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">1–2 години + контент. Реально поєднати з роботою. Навчаємо пакетному створенню контенту.</div></div></div>
+      <div class="faq-item reveal d1"><div class="faq-q">Вже проходила курси — нічого не вийшло<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Тому це наставництво, не курс. Перевірка кожного кроку, індивідуальні дзвінки, маленька група.</div></div></div>
+      <div class="faq-item reveal d2"><div class="faq-q">Чи підійде для моєї ніші?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Фітнес, психологія, англійська, б'юті, бізнес-консалтинг та інші експертні ніші. Напиши — обговоримо.</div></div></div>
+      <div class="faq-item reveal d2"><div class="faq-q">А якщо ніхто не купить?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">До запуску ти вже матимеш підтверджений інтерес. Перевіряємо продукт на живих людях в модулі 2.</div></div></div>
+      <div class="faq-item reveal d3"><div class="faq-q">Коли перший результат?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Перша реакція — тиждень 1. Перші "хочу купити" — тиждень 4–5. Оплати — тиждень 5–6.</div></div></div>
+      <div class="faq-item reveal d3"><div class="faq-q">Оплата частинами?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Так, 2 платежі. Напиши для деталей.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="final">
+  <div class="container">
+    <h2 class="section-title reveal" style="margin-left:auto;margin-right:auto;text-align:center">Через 6 тижнів — або $3 000+ на рахунку, або ще один місяць гортання чужих запусків</h2>
+    <p class="section-sub reveal" style="margin-left:auto;margin-right:auto;text-align:center">Група до 10 людей · Старт — <strong style="color:var(--gold)">[ДАТА]</strong></p>
+    <a href="#pricing" class="btn btn-gold reveal d1" style="margin-top:8px">Забронювати місце →</a>
+    <p class="final-small reveal d2">Після заявки — коротка розмова. Без тиску.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">СВІЙ ЗАПУСК</div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/PLACEHOLDER" target="_blank" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://t.me/PLACEHOLDER" target="_blank" class="footer-social" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6.54-1.1 5.57c-.08.4-.31.5-.63.31l-1.74-1.28-.84.81c-.09.09-.17.17-.36.17l.13-1.78 3.22-2.91c.14-.13-.03-.2-.22-.07l-3.98 2.51-1.71-.53c-.37-.12-.38-.37.08-.55l6.7-2.58c.31-.11.58.08.48.55z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>ФОП Коваль Іван Сергійович · © 2025–2026</span>
+      <div class="footer-links">
+        <a href="#" onclick="openModal('privacy');return false">Політика конфіденційності</a>
+        <a href="#" onclick="openModal('offer');return false">Публічна оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta"><a href="#pricing" class="btn btn-gold">Забронювати місце →</a></div>
+
+<!-- Lead Form Modal -->
+<div class="modal-overlay form-modal" id="leadFormModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('leadFormModal')">✕</button>
+    <div id="leadFormView">
+      <h2>Залишити заявку</h2>
+      <p style="color:var(--text2);margin-bottom:22px">Тариф: <strong id="selectedTariff" style="color:var(--gold-light)">—</strong></p>
+      <div class="form-group"><label>Ім'я</label><input type="text" id="formName" placeholder="Як тебе звати?"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="formEmail" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Телефон</label><input type="tel" id="formPhone" placeholder="+380..."></div>
+      <input type="hidden" id="formTariff"><input type="hidden" id="formPrice">
+      <button class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px" onclick="submitLeadForm()">Надіслати заявку →</button>
+    </div>
+    <div class="form-success" id="leadFormSuccess"><h3>Дякую за заявку!</h3><p style="color:var(--text2)">Зв'яжемось найближчим часом. Без тиску.</p></div>
+  </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal-overlay" id="privacyModal"><div class="modal-content"><button class="modal-close" onclick="closeModal('privacyModal')">✕</button><h2>Політика конфіденційності</h2><p><strong>ФОП Коваль Іван Сергійович</strong></p><h3>1. Загальні положення</h3><p>Ця Політика визначає порядок збору, зберігання та захисту персональних даних відповідно до Закону України «Про захист персональних даних».</p><h3>2. Дані що збираються</h3><p>Ім'я, email, телефон, дані форм заявок, технічні дані (IP, браузер), cookies та Facebook Pixel.</p><h3>3. Мета збору</h3><p>Надання послуг, комунікація, обробка заявок, маркетинг (за згодою), аналітика, ретаргетинг.</p><h3>4. Захист даних</h3><p>Дані зберігаються на захищених серверах з організаційними та технічними заходами захисту.</p><h3>5. Третіх сторони</h3><p>Дані можуть передаватися платіжним сервісам, Facebook/Meta, Google. Не продаються третім особам.</p><h3>6. Cookies</h3><p>Сайт використовує cookies та Facebook Pixel для аналітики і реклами.</p><h3>7. Права</h3><p>Ви маєте право на доступ, зміну, видалення ваших даних та відкликання згоди.</p><h3>8. Контакти</h3><p>ФОП Коваль Іван Сергійович · [email] · [telegram]</p></div></div>
+
+<!-- Offer Modal -->
+<div class="modal-overlay" id="offerModal"><div class="modal-content"><button class="modal-close" onclick="closeModal('offerModal')">✕</button><h2>Публічна оферта</h2><p><strong>Договір публічної оферти</strong> · ФОП Коваль Іван Сергійович</p><h3>1. Терміни</h3><p>Виконавець — ФОП Коваль І.С. Замовник — особа що здійснила оплату. Послуги — онлайн-наставництво.</p><h3>2. Предмет</h3><p>Доступ до наставництва "СВІЙ ЗАПУСК" відповідно до обраного тарифу. Оплата = акцепт оферти.</p><h3>3. Вартість</h3><p>Старт — $600. Наставництво — $1 200. VIP — $2 500. Можлива оплата частинами (2 платежі).</p><h3>4. Надання послуг</h3><p>Онлайн: відеоуроки, дзвінки, чат, матеріали. 6–8 тижнів. Доступ 4/6/12 місяців залежно від тарифу.</p><h3>5. Обов'язки</h3><p>Виконавець надає матеріали і підтримку. Замовник оплачує послуги і не розповсюджує матеріали.</p><h3>6. Повернення</h3><p>Протягом 3 днів від початку, якщо доступ менше 1 модуля. Після — кошти не повертаються.</p><h3>7. Інтелектуальна власність</h3><p>Всі матеріали — власність Виконавця. Тільки особисте використання.</p><h3>8. Відповідальність</h3><p>Виконавець дає інструменти і підтримку, але не гарантує конкретних фінансових результатів.</p><h3>9. Реквізити</h3><p>ФОП Коваль Іван Сергійович · [ЄДРПОУ] · [Адреса] · [Банк]</p></div></div>
+
+<script>
+// UTM
+(function(){const p=new URLSearchParams(location.search);const u={};['utm_source','utm_medium','utm_campaign'].forEach(k=>{const v=p.get(k);if(v)u[k]=v});if(Object.keys(u).length)try{sessionStorage.setItem('u',JSON.stringify(u))}catch(e){}})();
+function gu(){try{return JSON.parse(sessionStorage.getItem('u')||'{}')}catch(e){return{}}}
+
+// Particles
+(function(){const c=document.getElementById('particles');for(let i=0;i<30;i++){const p=document.createElement('span');p.className='particle';p.style.left=Math.random()*100+'%';p.style.animationDuration=(8+Math.random()*12)+'s';p.style.animationDelay=Math.random()*10+'s';p.style.width=p.style.height=(1+Math.random()*3)+'px';c.appendChild(p)}})();
+
+// Reveal
+const ro=new IntersectionObserver(e=>{e.forEach(n=>{if(n.isIntersecting){n.target.classList.add('visible');ro.unobserve(n.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// Counter
+const co=new IntersectionObserver(e=>{e.forEach(n=>{if(n.isIntersecting){const el=n.target,t=+el.dataset.target,d=1500,s=performance.now();(function u(now){const p=Math.min((now-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(u)})(s);co.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>co.observe(el));
+
+// Accordion
+document.querySelectorAll('.accordion-header').forEach(h=>{h.onclick=()=>{const i=h.parentElement,b=i.querySelector('.accordion-body'),a=i.classList.contains('active');document.querySelectorAll('.accordion-item.active').forEach(x=>{x.classList.remove('active');x.querySelector('.accordion-body').style.maxHeight=null});if(!a){i.classList.add('active');b.style.maxHeight=b.scrollHeight+'px'}}});
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{q.onclick=()=>{const i=q.parentElement,a=i.querySelector('.faq-a'),act=i.classList.contains('active');document.querySelectorAll('.faq-item.active').forEach(x=>{x.classList.remove('active');x.querySelector('.faq-a').style.maxHeight=null});if(!act){i.classList.add('active');a.style.maxHeight=a.scrollHeight+'px'}}});
+
+// Sticky
+const sc=document.getElementById('stickyCta'),hs=document.getElementById('hero'),ps=document.getElementById('pricing');
+window.addEventListener('scroll',()=>{if(innerWidth>768)return;const h=hs.getBoundingClientRect().bottom,p=ps.getBoundingClientRect().top;sc.classList.toggle('visible',h<0&&p>innerHeight)},{passive:true});
+
+// FB events
+const pob=new IntersectionObserver(e=>{e.forEach(n=>{if(n.isIntersecting){if(typeof fbq!=='undefined')fbq('track','ViewContent',{content_name:'Pricing'});pob.unobserve(n.target)}})},{threshold:.3});
+pob.observe(ps);
+
+// Lead form
+function openLeadForm(t,p){if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:t,value:p,currency:'USD'});document.getElementById('selectedTariff').textContent=t+' — $'+p;document.getElementById('formTariff').value=t;document.getElementById('formPrice').value=p;document.getElementById('leadFormView').style.display='block';document.getElementById('leadFormSuccess').style.display='none';document.getElementById('leadFormModal').classList.add('open');document.body.style.overflow='hidden'}
+async function submitLeadForm(){const n=document.getElementById('formName').value.trim(),e=document.getElementById('formEmail').value.trim(),p=document.getElementById('formPhone').value.trim(),t=document.getElementById('formTariff').value,pr=document.getElementById('formPrice').value;if(!n||!e||!p)return alert('Заповни всі поля');const u=gu();try{await fetch('PLACEHOLDER_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},mode:'no-cors',body:JSON.stringify({timestamp:new Date().toISOString(),name:n,email:e,phone:p,tariff:t,price:pr,utm_source:u.utm_source||'',utm_medium:u.utm_medium||'',utm_campaign:u.utm_campaign||'',url:location.href})})}catch(err){}if(typeof fbq!=='undefined')fbq('track','InitiateCheckout',{content_name:t,value:+pr,currency:'USD'});document.getElementById('leadFormView').style.display='none';document.getElementById('leadFormSuccess').style.display='block'}
+
+// Modals
+function openModal(t){document.getElementById(t==='privacy'?'privacyModal':'offerModal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('.modal-overlay').forEach(m=>{m.onclick=e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow=''}}});
+document.onkeydown=e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow=''}};
+</script>
+</body>
+</html>
